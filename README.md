@@ -15,7 +15,7 @@ npm install @partyk/autoloader.js
 Basic usage of AutoLoader in JavaScript looks like this:
 
 ```javascript
-import AutoLoader from '@partyk/autoloader.js/autoLoader.js';
+import AutoLoader from '@partyk/autoloader.js';
 
 export default (wrapper = global.document, selector = '.js-auto-loader') => {
     const loader = new AutoLoader({
@@ -66,7 +66,7 @@ AutoLoader supports the following configuration parameters:
 ## Example with Custom Configuration
 
 ```javascript
-import AutoLoader from '@js/libs/autoLoader';
+import AutoLoader from '@partyk/autoloader.js';
 
 const customLoader = (wrapper = document.querySelector('#app'), selector = '.custom-module') => {
     const loader = new AutoLoader({

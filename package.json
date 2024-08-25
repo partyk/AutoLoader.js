@@ -14,7 +14,7 @@
     "javascript"
   ],
   "author": "Bohdan Partyk",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/partyk/AutoLoader.js/issues"
   },

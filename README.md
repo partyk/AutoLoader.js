@@ -1,4 +1,4 @@
-# AutoLoader
+# AutoLoader.js
 
 AutoLoader is a tool for dynamically loading JavaScript modules in an application.
 

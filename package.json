@@ -2,13 +2,13 @@
   "name": "autoloader.js",
   "version": "1.0.0",
   "description": "AutoLoader is a tool for dynamically loading JavaScript modules in an application.",
-  "main": "index.js",
+  "main": "autoloader.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/partyk/AutoLoader.js.git"
+    "url": "https://github.com/partyk/AutoLoader.js"
   },
   "keywords": [
     "javascript"

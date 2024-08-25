@@ -5,7 +5,7 @@ AutoLoader is a tool for dynamically loading JavaScript modules in an applicatio
 ## Installation
 
 ```bash
-npm install autoloader.js
+npm install @partyk/autoloader.js
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install autoloader.js
 Basic usage of AutoLoader in JavaScript looks like this:
 
 ```javascript
-import AutoLoader from '@js/libs/autoLoader';
+import AutoLoader from '@partyk/autoloader.js/autoLoader.js';
 
 export default (wrapper = global.document, selector = '.js-auto-loader') => {
     const loader = new AutoLoader({

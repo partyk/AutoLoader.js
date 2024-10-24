@@ -1,6 +1,6 @@
 {
   "name": "@partyk/autoloader.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AutoLoader is a tool for dynamically loading JavaScript modules in an application.",
   "main": "index.js",
   "scripts": {

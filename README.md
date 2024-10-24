@@ -45,6 +45,7 @@ In the HTML structure, mark elements that should be loaded as modules using the 
 - The `js-auto-loader` class corresponds to the default selector in the AutoLoader configuration.
 - The `data-load-module` attribute specifies the path to the module that should be loaded for this element.
 - The `data-load-type="lazy"` attribute controls the loading behavior. When set to "lazy", the HTML element will only be loaded when it becomes visible in the viewport.
+- The `data-load-delay="10"` attribute specifies a delay in seconds before the module is loaded.
 
 
 ## Configuration

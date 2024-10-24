@@ -28,18 +28,31 @@ class AutoLoader {
      * @param element {HTMLElement}
      */
     loadElement(element) {
+        let timeout = null;
         try {
             // lazyloading
             if (element.dataset.loadType === 'lazy' && 'IntersectionObserver' in window) {
+                if (element.dataset.loadDelay) {
+                    timeout = setTimeout(() => {
+                        this.loadModule(element);
+                    }, Number(element.dataset.loadDelay) * 1000);
+                }
                 const observer = new IntersectionObserver((entries, observer) => {
                     if (entries[0].isIntersecting) {
+                        clearTimeout(timeout);
                         this.loadModule(element);
                         observer.unobserve(entries[0].target);
                     }
                 });
                 observer.observe(element);
             } else {
-                this.loadModule(element);
+                if (element.dataset.loadDelay) {
+                    timeout = setTimeout(() => {
+                        this.loadModule(element);
+                    }, Number(element.dataset.loadDelay) * 1000);
+                } else {
+                    this.loadModule(element);
+                }
             }
         } catch (error) {
             throw new Error(error);

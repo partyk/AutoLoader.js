@@ -77,7 +77,7 @@ class AutoLoader {
                 }
             } else {
                 if (!this.options.hasAttributeSkip) {
-                    // console.debug(`${this.options.prefixConsole}: Module is skip, hasn't data attribute ${this.options.hasAttribute.name}=${this.options.hasAttribute.value}`, moduleName);
+                    // console.info(`${this.options.prefixConsole}: Module is skip, hasn't data attribute ${this.options.hasAttribute.name}=${this.options.hasAttribute.value}`, moduleName);
                     return;
                 }
             }
@@ -88,7 +88,9 @@ class AutoLoader {
         }
 
         if (!moduleName) {
-            throw new Error(`${this.options.prefixConsole}: missing data attribute data-load-module in element`);
+            const clone = element.cloneNode(false);
+            clone.innerHTML = '...';
+            throw new Error(`${this.options.prefixConsole}: missing data attribute data-load-module in element ${clone.outerHTML}`);
         }
         moduleName.split(',').forEach(moduleName => {
             this.loadModuleName(element, moduleName.trim());
